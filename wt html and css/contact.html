@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     <style>
+         body{background-image: url('contact1.jpg');background-repeat: no-repeat ;background-attachment: fixed;background-size: cover;}
+    </style>
+</head>
+<body>
+    
+                  <a href="#">GB Tours & Travels</a>
+                      <a href="index.html">Home</a>
+                      <a href="about.html">About</a>
+                      <a href="Service.html">Service</a>
+                      <a href="project.html">Project</a>
+                      <a href="contact.html">Contact</a>
+                    <form class="d-flex ms-auto order-5" style="display: flex;">
+                        <div style="padding-top: 8px;">
+                        <input class="form-control me-1" type="search" placeholder="Search"  aria-label="Search">
+                        </div><div style="padding: 8px 10px;">
+                        <button class="btn btn-outline-success "  type="submit">Search</button>
+                        </div>
+                        </form>
+      <img src="logo1.jpg" height="80" >
+    <center>
+        <h1 onmouseover="mouseover()" onmouseout="mouseout()" id="a1">CONTACT US</h1><br>
+        <h2>We're Ready, Let's Talk.</h2>
+        <br>
+        <form class="form" id="form" onsubmit="return validateForm()">
+            <div>
+                <div>
+                <input type="text" name="username" id="username" placeholder="User Name">
+                <div class="error" id="nameError"></div>
+                </div>
+                <br><br>
+                <div>
+                <input type="email" name="Email Address" id="email" placeholder="Email Address">
+                <div class="error" id="emailError"></div>
+                <br><br>
+                </div>
+                <div>
+                <label for="Message"></label>
+                <textarea name="id" cols="30" rows="5" id="message" placeholder="Message"></textarea>
+                <div class="error" id="messageError"></div>
+                </div>
+                <br><br>
+                <div>
+                    <label for="phone"></label>
+                    <input type="number" name="phone" id="phone" placeholder="Phone Number">
+                <div class="phoneerror" id="phoneError"></div>
+                <br><br>
+                </div>
+            </div>
+            <a href="sendmessage.html"><button type="submit" id="form">SUBMIT</button></a>
+            <a href="sendmessage.html"><button type="reset" id="form">RESET</button></a>
+        </form>
+            <br><br><h1><b>Contact Info</b></h1>
+            <h4><i>Address</i></h4>
+            <p>123 Fifth Avenue,Tamil Nadu,<br>
+                India</p>
+                <h4><i>Email Us</i></h4>
+                <p>ggtours@gmail.com</p>
+                <h4><i>Call Us</i></h4>
+                <p>+91-9876543210</p>
+            </center>
+    <script>
+    // console.log("adas");
+    function validateForm() {
+    var nameInput = document.getElementById("username");
+    // console.log(nameinput);
+      var emailInput = document.getElementById("email");
+      var messageInput = document.getElementById("message");
+      var phoneInput = document.getElementById("phone");
+
+      var nameError = document.getElementById("nameError");
+      var emailError = document.getElementById("emailError");
+      var messageError = document.getElementById("messageError");
+      var phoneError = document.getElementById("phoneError");
+      if (nameInput.value === "") {
+        nameError.innerHTML = "Please enter your name";
+        nameInput.focus();
+        return false;
+      } else {
+        nameError.innerHTML = "";
+      }
+    
+      if (emailInput.value === "") {
+        emailError.innerHTML = "Please enter your email";
+        emailInput.focus();
+        return false;
+      } else {
+        emailError.innerHTML = "";
+      }
+      if (messageInput.value === "") {
+        messageError.innerHTML = "Please enter your message";
+        messageInput.focus();
+        return false;
+      } else {
+        messageError.innerHTML = "";
+      }
+      if (phoneInput.value === "") {
+        phoneError.innerHTML = "Please enter your phone number";
+        phoneInput.focus();
+        return false;
+      } else {
+        phoneError.innerHTML = "";
+      }
+    }
+function start()
+{
+document.getElementById("username").addEventListener("focus",focusone, false );
+document.getElementById("username").addEventListener("blur", blurone, false );
+document.getElementById("email").addEventListener("focus",focusone1, false );
+document.getElementById("email").addEventListener("blur", blurone1, false );
+document.getElementById("message").addEventListener("focus",focusone2, false );
+document.getElementById("message").addEventListener("blur", blurone2, false );
+document.getElementById("phone").addEventListener("focus",focusone3, false );
+document.getElementById("phone").addEventListener("blur", blurone3, false );
+document.getElementById("form").addEventListener("submit",subfun, false );
+document.getElementById("form").addEventListener("reset",resetfun, false );
+}
+
+function focusone() {document.getElementById("username").style.background="turquoise";}
+function blurone() { document.getElementById("username").style.background="pink";}
+function focusone1() {document.getElementById("email").style.background="turquoise";}
+function blurone1() { document.getElementById("email").style.background="pink";}
+function focusone2() {document.getElementById("message").style.background="turquoise";}
+function blurone2() { document.getElementById("message").style.background="pink";}
+function focusone3() {document.getElementById("phone").style.background="turquoise";}
+function blurone3() { document.getElementById("phone").style.background="pink";}
+function subfun() 
+{ window.alert("Are Sure to Submit");
+  window.alert("Thank You");
+}
+function resetfun() {window.alert("Are Sure to Reset")}
+
+</script>
+      
+</body>
+</html>
